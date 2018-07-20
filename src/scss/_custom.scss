@@ -16,27 +16,6 @@
     }
   }
 
-  // Rodape com input entrar em contato
-  .rodapePrincipal-patrocinadores {
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .rodapePrincipal-patrocinadores-list {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 70%;
-      margin-right: 5% ;
-    }
-
-    .rodapePrincipal-contatoForm-fieldset {
-      display: flex;
-    }
-  }
-
   // Mapa de cursos
   .rodapePrincipal-navMap-list {
     display: flex;
@@ -46,12 +25,14 @@
   }
 }
 
-@media screen and (min-width: 459px) {
-  // Cursos
-  .conteudoPrincipal-cursos {
+// ---------------------------------------------------------------------
+// Cursos
+.conteudoPrincipal-cursos {
+  margin-bottom: 5%;
+
+  @media screen and (min-width: 459px) {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 5%;
 
     @media screen and (max-width: 768px) {
       .conteudoPrincipal-cursos-link {
@@ -106,6 +87,54 @@
           margin-left: 0;
         }
       }
+    }
+  }
+}
+
+// ---------------------------------------------------------------------
+// Rodape com input entrar em contato
+.rodapePrincipal-patrocinadores {
+
+  .rodapePrincipal-patrocinadores-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    li {
+      margin: 2%;
+    }
+
+    @media screen and (min-width: 400px) {
+      flex-direction: row;
+    }
+  }
+
+  .rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+    margin: 0 auto;
+    max-width: 350px;
+
+    input {
+      width: 75%;
+    }
+
+    button {
+      flex-grow: 1;
+    }
+  }
+
+  @media screen and (min-width: 689px) {
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .rodapePrincipal-patrocinadores-list {
+      width: 70%;
+      margin-bottom: 0;
+      margin-right: 5%;
     }
   }
 }
