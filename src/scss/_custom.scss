@@ -1,4 +1,9 @@
+.container {
+  max-width: 1000px;
+}
+
 @media screen and (min-width: 769px) {
+  // Menu principal
   .cabecalhoPrincipal {
     .container {
       display: flex;
@@ -11,6 +16,7 @@
     }
   }
 
+  // Rodape com input entrar em contato
   .rodapePrincipal-patrocinadores {
     .container {
       display: flex;
@@ -28,6 +34,78 @@
 
     .rodapePrincipal-contatoForm-fieldset {
       display: flex;
+    }
+  }
+
+  // Mapa de cursos
+  .rodapePrincipal-navMap-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 260px;
+  }
+}
+
+@media screen and (min-width: 459px) {
+  // Cursos
+  .conteudoPrincipal-cursos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+
+    @media screen and (max-width: 768px) {
+      .conteudoPrincipal-cursos-link {
+        width: 48%;
+        margin: 1%;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+        &:nth-child(2n+1) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 989px) {
+      .conteudoPrincipal-cursos-link {
+        width: 31%;
+        margin: 1%;
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+
+        &:nth-child(3n+1) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    @media screen and (min-width: 980px) {
+      .conteudoPrincipal-cursos-link {
+        width: 24%;
+        margin: 1%;
+
+        &:nth-child(2n) {
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        &:nth-child(2n+1) {
+          margin-right: 0;
+        }
+
+        &:nth-child(4n) {
+          margin: 1%;
+          margin-right: 0;
+        }
+
+        &:nth-child(4n+1) {
+          margin: 1%;
+          margin-left: 0;
+        }
+      }
     }
   }
 }
