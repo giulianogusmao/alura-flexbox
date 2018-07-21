@@ -91,6 +91,65 @@
   }
 }
 
+// Videos sobre
+.videoSobre {
+
+  .embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 0;
+    overflow: hidden;
+    margin: 0 auto;
+
+    &:before {
+      content: "";
+      padding-top: 56.25%;
+      display: block;
+      box-sizing: border-box;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+
+  .videoSobre-sobre {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 3% auto;
+  }
+
+  @media screen and (min-width: 769px) {
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .embed-responsive {
+      max-width: 50%;
+    }
+
+    .videoSobre-sobre {
+      margin: 0 0 0 3%;
+
+      .videoSobre-sobre-list {
+        flex-grow: 1;
+      }
+    }
+  }
+}
+
 // ---------------------------------------------------------------------
 // Rodape com input entrar em contato
 .rodapePrincipal-patrocinadores {
